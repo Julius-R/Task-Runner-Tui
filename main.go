@@ -1,16 +1,15 @@
 package main
 
 import (
-	"errors"
 	"log"
 	"time"
-	
+
 	tea "github.com/charmbracelet/bubbletea"
 )
 
 var steps = []Task{
 	{
-		"Task 1",
+		"PGS Helm Chart Values Release Update",
 		func(...any) error {
 			time.Sleep(time.Second * 2)
 			return nil
@@ -18,7 +17,7 @@ var steps = []Task{
 		StatusSuccess,
 	},
 	{
-		"Task 2",
+		"Imperium Release Update",
 		func(...any) error {
 			time.Sleep(time.Second * 2)
 			return nil
@@ -26,20 +25,12 @@ var steps = []Task{
 		StatusSuccess,
 	},
 	{
-		"Task 3",
+		"PGS Helm Chart Release",
 		func(...any) error {
 			time.Sleep(time.Second * 2)
 			return nil
 		},
 		StatusSuccess,
-	},
-	{
-		"Task 4",
-		func(...any) error {
-			time.Sleep(time.Second * 2)
-			return errors.New("fail")
-		},
-		StatusError,
 	},
 }
 
